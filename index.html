@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reloj Digital</title>
+  </head>
+  <body>
+    <!-- Contenedor principal -->
+    <div class="container">
+      <!-- Sección del reloj -->
+      <div class="clock">
+        <!-- Sección de la hora y el formato -->
+        <div class="time">
+          <p id="hora"></p>
+          <p id="formato"></p>
+        </div>
+        <!-- Sección de la fecha y botón para cambiar el formato -->
+        <p id="fecha"></p>
+        <button id="toggleFormato">Cambiar Formato</button>
+      </div>
+      <!-- Sección de configuración -->
+      <div class="settings">
+        <!-- Selector para cambiar la zona horaria -->
+        <label for="zonaHoraria">Zona Horaria:</label>
+        <select id="zonaHoraria" onchange="cambiarZonaHoraria(this.value)">
+          <option value="UTC">UTC</option>
+          <option value="America/New_York">America/New_York</option>
+          <option value="Europe/London">Europe/London</option>
+          <!-- Agrega más opciones según las zonas horarias que desees -->
+        </select>
+
+        <!-- Selector para cambiar el tema de color -->
+        <label for="temaColor">Cambiar Tema:</label>
+        <select id="temaColor" onchange="cambiarTema(this.value)">
+          <option value="#f0f0f0">Predeterminado</option>
+          <option value="#3498db">Azul</option>
+          <option value="#e74c3c">Rojo</option>
+          <!-- Agrega más opciones de colores según tus preferencias -->
+        </select>
+      </div>
+    </div>
+    <!-- Script externo para la funcionalidad dinámica -->
+    <script src="script.js"></script>
+  </body>
+</html>

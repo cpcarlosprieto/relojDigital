@@ -1,0 +1,123 @@
+/* Estilo de reset para eliminar márgenes y rellenos predeterminados */
+
+* {
+  padding: 0; /*elimina cualquier relleno interno por defecto.*/
+  margin: 0; /*elimina cualquier margen exterior por defecto.*/
+  box-sizing: border-box; /*establece el modelo de caja como "border-box",*/
+}
+
+/* Estilo del cuerpo del documento */
+body {
+  display: flex; /*convierte el contenedor en un contenedor flexible.*/
+  align-items: center; /*centra los elementos a lo largo del eje transversal (vertical) del contenedor.*/
+  justify-content: center; /*centra los elementos a lo largo del eje principal (horizontal) del contenedor.*/
+  min-height: 100vh; /* establece una altura mínima del 100% del viewport (área visible  de la ventana del navegador). */
+  font-family: "Arial", sans-serif; /*establece la fuente del texto del cuerpo.*/
+  background-color: #f0f0f0; /* Color de fondo del cuerpo */
+}
+
+/* Estilo del contenedor principal */
+.container {
+  text-align: center; /*centra el texto y otros elementos internos horizontalmente dentro del contenedor.*/
+}
+
+/* Estilo del reloj */
+.clock {
+  color: #333; /* Color del texto dentro del reloj */
+  padding: 20px; /* Añade relleno interno alrededor del contenido del reloj */
+  border-radius: 20px; /* Establece el radio de borde para redondear las esquinas del reloj */
+  max-width: 300px; /* Establece el ancho máximo del reloj */
+  background-color: #fff; /* Establece el color de fondo del reloj */
+  margin: 0 auto; /* Centra el reloj horizontalmente usando márgenes automáticos en los lados izquierdo y derecho */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave al reloj */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Establece transiciones suaves para cambiar el color de fondo y la escala del reloj */
+}
+
+/* Estilo del reloj con animación */
+.clock.animate {
+  transform: scale(1.1); /* Escala del reloj al aplicar la animación */
+}
+
+/* Estilo de la sección de la hora y formato */
+.time {
+  display: flex; /* Convierte la sección en un contenedor flexible */
+  align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+  justify-content: space-between; /* Espaciado uniforme entre los elementos, distribuyendo el espacio disponible entre ellos */
+}
+
+/* Estilo de la fecha */
+#fecha {
+  font-size: 1.5rem; /* Tamaño de fuente */
+  font-weight: 500; /* Grosor de la fuente */
+}
+
+/* Estilo de la hora */
+#hora {
+  font-size: 3rem; /* Tamaño de fuente */
+  font-weight: 400; /* Grosor de la fuente */
+}
+
+/* Estilo del formato de la hora */
+#formato {
+  font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilo del botón para cambiar el formato de la hora */
+button {
+  margin-top: 10px; /* Margen superior de 10 píxeles */
+  padding: 8px 12px; /* Relleno interno de 8 píxeles arriba/abajo y 12 píxeles izquierda/derecha */
+  background-color: #3498db; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Radio de borde para redondear las esquinas del botón */
+  cursor: pointer; /* Cursor tipo puntero al pasar sobre el botón */
+  font-size: 0.9rem; /* Tamaño de fuente de 0.9 rem */
+  transition: background-color 0.3s ease; /* Transición para cambiar el color de fondo del botón al pasar el ratón sobre él */
+}
+
+/* Estilo del botón al pasar el ratón sobre él */
+button:hover {
+  background-color: #2980b9; /* Color de fondo del botón al pasar el ratón sobre él */
+}
+
+/* Estilo de la sección de configuración */
+.settings {
+  margin-top: 20px; /* Margen superior de 20 píxeles */
+  display: flex; /* Convierte la sección en un contenedor flexible */
+  flex-direction: column; /* Establece la dirección de los elementos como columna */
+  align-items: center; /* Centra los elementos horizontalmente dentro del contenedor */
+}
+
+/* Estilo de las etiquetas y selectores en la sección de configuración */
+.settings label,
+.settings select {
+  margin-bottom: 10px; /* Margen inferior de 10 píxeles para separar las etiquetas y los selectores */
+}
+
+/* Estilo del selector */
+select {
+  padding: 8px; /* Relleno interno de 8 píxeles */
+  border: 1px solid #ddd; /* Borde del selector con un grosor de 1 píxel y color gris claro (#ddd) */
+  border-radius: 5px; /* Radio de borde para redondear las esquinas del selector */
+  cursor: pointer; /* Cursor tipo puntero al pasar sobre el selector */
+}
+
+/* Estilo del selector de tema de color */
+#temaColor {
+  background-color: #3498db; /* Color de fondo del selector */
+  color: #fff; /* Color del texto del selector */
+  transition: background-color 0.3s ease; /* Transición para cambiar el color de fondo del selector al pasar el ratón sobre él */
+}
+
+/* Estilo del selector de tema de color al pasar el ratón sobre él */
+#temaColor:hover {
+  background-color: #2980b9; /* Color de fondo del selector al pasar el ratón sobre él */
+}
+
+/*Adaptación de Estilos para Dispositivos Móviles*/
+@media (max-width: 600px) {
+  .clock {
+    margin: 10% 5%; /* Márgenes superior e inferior del 10%, márgenes izquierdo y derecho del 5% */
+    max-width: 90%; /* Ancho máximo del reloj del 90% del contenedor */
+  }
+}
